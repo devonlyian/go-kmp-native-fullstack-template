@@ -30,7 +30,7 @@ A DB connection failure is successfully retrieved `false` data. Distinguish it f
 
 ## Domain and required data
 
-- Backend boundary: `backend/internal/system`; the public Application entrypoint is `Service.Status(ctx)`.
+- Backend boundary: `backend/internal/system`; the public Application entrypoint is `Service.Status(ctx)`. Its GraphQL adapter lives in the shared transport package `backend/internal/graphql`.
 - Shared boundary: `app/shared/src/commonMain/kotlin/com/example/template/shared/feature/system`; `GetSystemStatusUseCase` fetches status through the repository.
 - Android boundary: `app/androidApp/src/main/kotlin/com/example/template/feature/system`; iOS boundary: `app/iosApp/Sources/Features/System`. `System` is the Swift spelling of the same `system` feature.
 - `SystemStatus.databaseReady` indicates whether the pgx/sqlc `SELECT 1` succeeds at query time. It is neither stored status history nor a guarantee that every server feature is healthy.

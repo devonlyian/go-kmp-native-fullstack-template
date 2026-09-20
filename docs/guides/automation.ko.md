@@ -11,13 +11,13 @@ Codex는 `.codex/agents/`에서 프로젝트 역할을 찾는다. 부모의 모�
 | 역할 | 담당 | 진입점 |
 | --- | --- | --- |
 | `planning` | 제품 가치·범위·흐름·규칙·완료 조건·승인 상태 | [plan-feature](../../.agents/skills/plan-feature/SKILL.ko.md) |
-| `backend` | Go·DB·서버 검증과 합의된 GraphQL 계약 변경 | [develop-backend](../../.agents/skills/develop-backend/SKILL.ko.md) |
-| `app` | KMP·Compose·SwiftUI 구현과 앱 검증 | [develop-app](../../.agents/skills/develop-app/SKILL.ko.md) |
+| `backend` | Go·DB·서버 검증과 앱이 작성한 GraphQL 계약 draft의 검토·확정 | [develop-backend](../../.agents/skills/develop-backend/SKILL.ko.md) |
+| `app` | KMP·Compose·SwiftUI 구현, SDL draft, 앱 검증 | [develop-app](../../.agents/skills/develop-app/SKILL.ko.md) |
 | `design` | 디자인 명세·매핑, 허용된 Figma 작업, 시각 검토 | [design-app](../../.agents/skills/design-app/SKILL.ko.md) |
 
 요청된 역할만 사용한다. 한정된 작업·허용 경로·관련 기획/계약/디자인 참조·완료 조건만 전달하고 지원되는 경우 새 문맥을 사용한다. 매 작업마다 모든 역할을 실행하거나 작업자에게 재위임을 요구하지 않는다. 메인 에이전트가 범위를 정하고 간결한 결과를 통합한다. 동시에 수정하는 작업자에게 기획 문서·디자인 매핑·번역 검토 기록을 포함해 겹치지 않는 소유권을 준다.
 
-기획은 `docs/plans/`에 구현 방식과 독립된 초안을 두며 Figma·GraphQL·데이터베이스·백엔드·앱 구현을 조사하거나 수정하지 않는다. 백엔드와 앱은 상대 구현 대신 루트 GraphQL SDL로 소통한다. 디자인은 재사용·검토를 위해 대상 네이티브 컴포넌트·화면을 읽을 수 있지만 프로덕션 코드를 수정하지 않는다. 새 디자인 결정은 앱 구현 전에 검토받고 승인된 기준은 반복 승인하지 않는다. 부족한 기획·계약이나 사용할 수 없는 도구는 동작을 지어내지 않고 보고한다. 역할 지침은 안내이며 파일 시스템 접근 통제가 아니다.
+기획은 `docs/plans/`에 구현 방식과 독립된 초안을 두며 Figma·GraphQL·데이터베이스·백엔드·앱 구현을 조사하거나 수정하지 않는다. 백엔드와 앱은 상대 구현 대신 루트 GraphQL SDL로 소통한다: 앱 영역이 승인된 디자인의 데이터 요구사항으로 SDL draft를 작성하고 backend 영역이 서버 구현 전에 검토·확정한다. 디자인은 재사용·검토를 위해 대상 네이티브 컴포넌트·화면을 읽을 수 있지만 프로덕션 코드를 수정하지 않는다. 새 디자인 결정은 앱 구현 전에 검토받고 승인된 기준은 반복 승인하지 않는다. 부족한 기획·계약이나 사용할 수 없는 도구는 동작을 지어내지 않고 보고한다. 역할 지침은 안내이며 파일 시스템 접근 통제가 아니다.
 
 요청 예시: “planning으로 이 기능 기획을 작성하고 검토해줘”, “backend로 합의된 Query를 구현해줘”, “design으로 승인된 네이티브 흐름 초안을 만들어줘”, “app으로 이 계약과 승인된 디자인을 구현해줘”. 전체 영역 통합은 별도로 요청한다.
 

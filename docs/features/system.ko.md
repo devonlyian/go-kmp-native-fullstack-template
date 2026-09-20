@@ -30,7 +30,7 @@ DB 연결 실패는 정상적으로 조회한 `false` 데이터다. API 연결 �
 
 ## Domain 및 필요한 데이터
 
-- Backend 경계: `backend/internal/system`; 공개 Application 진입점은 `Service.Status(ctx)`다.
+- Backend 경계: `backend/internal/system`; 공개 Application 진입점은 `Service.Status(ctx)`다. GraphQL 어댑터는 공유 transport 패키지 `backend/internal/graphql`에 둔다.
 - Shared 경계: `app/shared/src/commonMain/kotlin/com/example/template/shared/feature/system`; `GetSystemStatusUseCase`가 repository를 통해 상태를 조회한다.
 - Android 경계: `app/androidApp/src/main/kotlin/com/example/template/feature/system`; iOS 경계: `app/iosApp/Sources/Features/System`이다. `System`은 Swift 표기이며 동일한 `system` 기능이다.
 - `SystemStatus.databaseReady`는 조회 시점의 pgx/sqlc `SELECT 1` 성공 여부다. 저장된 상태 이력이나 모든 서버 기능의 정상 여부를 뜻하지 않는다.

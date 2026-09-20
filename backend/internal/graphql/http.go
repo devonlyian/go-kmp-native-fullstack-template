@@ -4,7 +4,7 @@ import (
 	"context"
 	"net/http"
 
-	"example.com/template/backend/internal/system/graphql/generated"
+	"example.com/template/backend/internal/graphql/generated"
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/handler/extension"
 	"github.com/vektah/gqlparser/v2/gqlerror"

@@ -15,14 +15,14 @@ Use DDD's Bounded Context and domain ownership concepts to decide boundaries. A 
 | `backend/internal/<domain>/domain` | Domain models and business rules; no HTTP, GraphQL, or SQL concerns |
 | `backend/internal/<domain>/application` | Public use cases and coordination of domain logic and data access |
 | `backend/internal/<domain>/repository` | The domain's data access through sqlc and pgx |
-| `backend/internal/<domain>/graphql` | GraphQL adapter; delegates use cases to Application and maps API results |
+| `backend/internal/graphql` | Shared GraphQL transport: gqlgen generated code and one resolver file per schema; delegates to each domain's public Application API |
 | `backend/cmd/api/main.go` | Manually creates dependencies, connects adapters, and starts the API process |
 
 The current request flow is:
 
 ```text
 POST /graphql: systemStatus
-  → system GraphQL resolver
+  → shared GraphQL resolver
   → application.Service.Status
   → repository.Repository.DatabaseReady
   → sqlc-generated query / pgx
@@ -33,6 +33,6 @@ This is the runtime call flow, not an instruction to make Domain depend on Appli
 
 When more domains are added, call another domain only through its public Application API. Do not import its Repository, execute SQL against its owned data directly, or bypass it through generated database access. A shared PostgreSQL instance does not remove ownership boundaries. Use ordinary in-process Go calls between modules. Consider independent services and network protocols only when independent deployment, scaling, or fault isolation is actually needed; service extraction is not a goal by itself.
 
-The GraphQL contract remains under `contracts/graphql/`, with domain-specific SDL files feeding one public API. Do not introduce `backend/graph/schema` as a second source. The current gqlgen output is under `system`; when a second context is needed, review resolver composition and generated-code placement as part of that change rather than routing new domain logic through `system`.
+The GraphQL contract remains under `contracts/graphql/`, with domain-specific SDL files feeding one public API. Do not introduce `backend/graph/schema` as a second source. gqlgen merges all SDL files into one schema and one resolver root, so generated code lives in the shared `internal/graphql` package and each new `<domain>.graphqls` produces `internal/graphql/<domain>.resolvers.go` that delegates to that domain's Application. Do not route another domain's logic through `system`.
 
 Use [backend development](../../.agents/skills/develop-backend/SKILL.md). Add dependencies only for current requirements; see [dependencies](dependencies.md).

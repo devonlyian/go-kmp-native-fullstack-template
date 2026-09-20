@@ -2,7 +2,7 @@
 
 [English](architecture.md) | [한국어](architecture.ko.md)
 
-The app consumes root `contracts/graphql/` through Apollo Operations. Its design does not depend on how the server stores data or implements resolvers. Read only app source and contract descriptions.
+The app consumes root `contracts/graphql/` through Apollo Operations and drafts SDL changes from approved design data requirements; the backend scope reviews a draft and settles the contract before server implementation. Its design does not depend on how the server stores data or implements resolvers. Read only app source and contract descriptions.
 
 | Location | Responsibility |
 | --- | --- |

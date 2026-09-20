@@ -13,7 +13,8 @@ required = (
     "contracts/graphql/system.graphqls", "backend/AGENTS.md", "backend/go.mod",
     "backend/gqlgen.yml", "backend/sqlc.yaml", "backend/atlas.hcl",
     "backend/cmd/api", "backend/db/schema", "backend/db/migration",
-    "backend/db/query", "backend/db/generated", "app/AGENTS.md",
+    "backend/db/query", "backend/db/generated", "backend/internal/graphql",
+    "app/AGENTS.md",
     "app/design/design-system-map.yaml", "app/shared",
     "app/androidApp", "app/iosApp", "tools/verify.sh",
     ".agents/skills/plan-feature/SKILL.md", ".codex/agents/planning.toml",
@@ -42,7 +43,7 @@ for path in source_files():
     if path.name in {"schema.json", "schema.graphql.json"} and not in_contract:
         errors.append(f"Introspection schema copy: {relative}")
     if relative.parts[:2] == ("app", "shared") and path.suffix == ".kt":
-        if re.search(r"^import (?:androidx\.(?:compose|lifecycle|navigation)|platform\.SwiftUI)",
+        if re.search(r"^import (?:androidx\.(?:compose|lifecycle|navigation)|platform\.(?:SwiftUI|UIKit))",
                      path.read_text(), re.MULTILINE):
             errors.append(f"Platform presentation import in shared: {relative}")
         if re.search(r"(?:ViewModel|ScreenState|Screen|Navigation)\.kt$", path.name):
