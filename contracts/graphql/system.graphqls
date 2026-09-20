@@ -1,0 +1,8 @@
+type Query {
+  "Database readiness, checked through the system application and SQL repository."
+  systemStatus: SystemStatus!
+}
+
+type SystemStatus {
+  databaseReady: Boolean!
+}

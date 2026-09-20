@@ -1,0 +1,66 @@
+name: TemplateApp
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: '26.0'
+settings:
+  base:
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]': x86_64
+    SWIFT_VERSION: '6.0'
+    ENABLE_USER_SCRIPT_SANDBOXING: NO
+    GENERATE_INFOPLIST_FILE: YES
+    CODE_SIGN_STYLE: Automatic
+    TARGETED_DEVICE_FAMILY: '1,2'
+targets:
+  TemplateApp:
+    type: application
+    platform: iOS
+    sources: [Sources]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.template
+        INFOPLIST_KEY_CFBundleDisplayName: TemplateApp
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        FRAMEWORK_SEARCH_PATHS: '$(inherited) $(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)'
+        OTHER_LDFLAGS: '$(inherited) -framework Shared'
+      configs:
+        Debug:
+          INFOPLIST_FILE: Config/DebugInfo.plist
+    preBuildScripts:
+      - name: Build Shared framework
+        basedOnDependencyAnalysis: false
+        script: |
+          if [ -z "$JAVA_HOME" ]; then
+            export JAVA_HOME=$(/usr/libexec/java_home -v 25)
+          fi
+          "$SRCROOT/../gradlew" -p "$SRCROOT/.." :shared:embedAndSignAppleFrameworkForXcode
+  TemplateAppTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [Tests]
+    dependencies:
+      - target: TemplateApp
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.template.tests
+  TemplateAppUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [UITests]
+    dependencies:
+      - target: TemplateApp
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.template.uitests
+schemes:
+  TemplateApp:
+    build:
+      targets:
+        TemplateApp: all
+    test:
+      targets:
+        - TemplateAppTests
+        - TemplateAppUITests

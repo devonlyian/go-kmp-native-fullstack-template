@@ -1,0 +1,11 @@
+tokens:
+  color/background: { android: AppColors.background, ios: AppColors.background }
+  color/onSurface: { android: AppColors.onSurface, ios: AppColors.onSurface }
+  color/primary: { android: AppColors.primary, ios: AppColors.primary }
+  spacing/md: { android: AppSpacing.md, ios: AppSpacing.md }
+  spacing/lg: { android: AppSpacing.lg, ios: AppSpacing.lg }
+components:
+  AppButton:
+    figma: AppButton
+    android: AppButton
+    ios: AppButton
