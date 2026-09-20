@@ -150,7 +150,7 @@ func newExecutionContext(
 }
 
 var sources = []*ast.Source{
-	{Name: "../../../../../contracts/graphql/system.graphqls", Input: `type Query {
+	{Name: "../../../../contracts/graphql/system.graphqls", Input: `type Query {
   "Database readiness, checked through the system application and SQL repository."
   systemStatus: SystemStatus!
 }
@@ -377,7 +377,7 @@ func (ec *executionContext) _Query_systemStatus(ctx context.Context, field graph
 		},
 		nil,
 		func(ctx context.Context, selections ast.SelectionSet, v *SystemStatus) graphql.Marshaler {
-			return ec.marshalNSystemStatus2ᚖexampleᚗcomᚋtemplateᚋbackendᚋinternalᚋsystemᚋgraphqlᚋgeneratedᚐSystemStatus(ctx, selections, v)
+			return ec.marshalNSystemStatus2ᚖexampleᚗcomᚋtemplateᚋbackendᚋinternalᚋgraphqlᚋgeneratedᚐSystemStatus(ctx, selections, v)
 		},
 		true,
 		true,
@@ -2101,7 +2101,7 @@ func (ec *executionContext) marshalNString2string(ctx context.Context, sel ast.S
 	return res
 }
 
-func (ec *executionContext) marshalNSystemStatus2ᚖexampleᚗcomᚋtemplateᚋbackendᚋinternalᚋsystemᚋgraphqlᚋgeneratedᚐSystemStatus(ctx context.Context, sel ast.SelectionSet, v *SystemStatus) graphql.Marshaler {
+func (ec *executionContext) marshalNSystemStatus2ᚖexampleᚗcomᚋtemplateᚋbackendᚋinternalᚋgraphqlᚋgeneratedᚐSystemStatus(ctx context.Context, sel ast.SelectionSet, v *SystemStatus) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			graphql.AddErrorf(ctx, "the requested element is null which the schema does not allow")

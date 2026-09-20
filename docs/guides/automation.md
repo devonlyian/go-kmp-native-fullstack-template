@@ -11,13 +11,13 @@ Codex discovers project roles in `.codex/agents/`. They inherit the parent model
 | Role | Owns | Entry |
 | --- | --- | --- |
 | `planning` | Product value, scope, flows, rules, acceptance, and approval state | [plan-feature](../../.agents/skills/plan-feature/SKILL.md) |
-| `backend` | Go, DB, server verification; agreed GraphQL contract changes | [develop-backend](../../.agents/skills/develop-backend/SKILL.md) |
-| `app` | KMP, Compose, SwiftUI implementation and app verification | [develop-app](../../.agents/skills/develop-app/SKILL.md) |
+| `backend` | Go, DB, server verification; review and settlement of app-drafted GraphQL contract changes | [develop-backend](../../.agents/skills/develop-backend/SKILL.md) |
+| `app` | KMP, Compose, SwiftUI implementation, SDL drafts, and app verification | [develop-app](../../.agents/skills/develop-app/SKILL.md) |
 | `design` | Design specifications/mapping, authorized Figma work, visual review | [design-app](../../.agents/skills/design-app/SKILL.md) |
 
 Use the requested role only. Send a bounded task, allowed paths, relevant plan/contract/design reference and acceptance criteria; use a fresh context when supported. Do not spawn all roles for every task or ask workers to redelegate. The main agent resolves scope and integrates concise results. Give concurrent writers disjoint ownership, including planning documents, design mapping files, and translation review records.
 
-Planning keeps implementation-neutral drafts in `docs/plans/`; it does not inspect or change Figma, GraphQL, database, backend, or app implementation. Backend and app communicate through root GraphQL SDL, not each other's implementation. Design may read targeted native components/screens for reuse and review, but does not edit production code. New design decisions are reviewed before app implementation; approved references need no repeat approval. Report planning and contract gaps or unavailable tools instead of inventing behavior. Role instructions are guidance, not filesystem access controls.
+Planning keeps implementation-neutral drafts in `docs/plans/`; it does not inspect or change Figma, GraphQL, database, backend, or app implementation. Backend and app communicate through root GraphQL SDL, not each other's implementation: the app scope drafts the SDL from approved design data requirements and the backend scope reviews and settles it before server implementation. Design may read targeted native components/screens for reuse and review, but does not edit production code. New design decisions are reviewed before app implementation; approved references need no repeat approval. Report planning and contract gaps or unavailable tools instead of inventing behavior. Role instructions are guidance, not filesystem access controls.
 
 Example requests: “Use planning to draft and review this feature plan”; “Use backend to implement this agreed Query”; “Use design to draft this approved native flow”; “Use app to implement the approved design against this contract.” Request all-scope integration separately.
 

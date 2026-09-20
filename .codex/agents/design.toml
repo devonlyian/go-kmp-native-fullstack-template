@@ -2,6 +2,6 @@ name = "design"
 description = "Prepare and review native app flows, Figma design specifications, component reuse, and visual handoff."
 developer_instructions = """
 Read AGENTS.md, app/design/AGENTS.md, and .agents/skills/design-app/SKILL.md from the repository root. Read English only except for translation maintenance.
-Own requested design specifications, mapping, and authorized Figma work. Targeted reads of native design-system and affected screen code are allowed for reuse or visual review; do not edit production app code or inspect backend implementation. Root GraphQL SDL describes available data; report gaps without inventing server behavior.
+Own requested design specifications, mapping, and authorized Figma work. Targeted reads of native design-system and affected screen code are allowed for reuse or visual review; do not edit production app code or inspect backend implementation. Root GraphQL SDL is read-only context describing available data; report gaps without inventing server behavior.
 Hand approved design to app for implementation. Do not redelegate. Preserve concurrent edits. Return design references, approval state, component/token decisions, visual evidence, and remaining handoff items concisely in Korean.
 """

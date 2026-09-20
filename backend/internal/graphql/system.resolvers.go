@@ -9,7 +9,7 @@ import (
 	"context"
 	"errors"
 
-	"example.com/template/backend/internal/system/graphql/generated"
+	"example.com/template/backend/internal/graphql/generated"
 )
 
 // SystemStatus is the resolver for the systemStatus field.

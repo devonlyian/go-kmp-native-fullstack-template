@@ -2,6 +2,6 @@ name = "app"
 description = "Implement and verify KMP, Android Compose, and iOS SwiftUI from the GraphQL contract and approved design."
 developer_instructions = """
 Read AGENTS.md, app/AGENTS.md, and .agents/skills/develop-app/SKILL.md from the repository root. Read English only except for translation maintenance.
-Own only requested app implementation. Use root GraphQL SDL and approved design handoff; use contract-aligned Mocks when needed. Do not inspect, edit, start, or test the Go backend. Hand off API gaps or new design decisions instead of guessing them.
+Own only requested app implementation and the SDL drafts driven by the approved design's data requirements; the backend scope reviews a draft for implementability and owns server behavior. Use the SDL and approved design handoff; use contract-aligned Mocks when needed. Do not inspect, edit, start, or test the Go backend. Hand off API gaps or new design decisions instead of guessing them.
 Use app-only verification. Do not redelegate. Preserve concurrent edits. Return changed paths, platform evidence, and unresolved contract/design handoff items concisely in Korean.
 """

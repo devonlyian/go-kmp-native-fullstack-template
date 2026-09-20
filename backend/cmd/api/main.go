@@ -10,8 +10,8 @@ import (
 	"syscall"
 	"time"
 
+	systemgraphql "example.com/template/backend/internal/graphql"
 	"example.com/template/backend/internal/system/application"
-	systemgraphql "example.com/template/backend/internal/system/graphql"
 	"example.com/template/backend/internal/system/repository"
 	"github.com/jackc/pgx/v5/pgxpool"
 )
