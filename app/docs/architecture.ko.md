@@ -2,7 +2,7 @@
 
 [English](architecture.md) | [한국어](architecture.ko.md)
 
-앱은 Apollo Operation으로 루트 `contracts/graphql/`을 소비한다. 서버의 저장 방식이나 resolver 구현에 의존해서 앱을 설계하지 않는다. 앱 코드와 계약 설명만 읽는다.
+앱은 Apollo Operation으로 루트 `contracts/graphql/`을 소비하고, 승인된 디자인의 데이터 요구사항으로 SDL 변경 draft를 작성한다. backend 범위가 draft를 검토하고 서버 구현 전에 계약을 확정한다. 서버의 저장 방식이나 resolver 구현에 의존해서 앱을 설계하지 않는다. 앱 코드와 계약 설명만 읽는다.
 
 | 위치 | 책임 |
 | --- | --- |

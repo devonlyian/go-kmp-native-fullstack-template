@@ -58,6 +58,7 @@ if [[ "$MODE" == all || "$MODE" == backend ]]; then
     else
       skip 'Atlas migration checksum' './tools/install-atlas.sh (Atlas v1.3.0)' 'cd backend && ../.tools/atlas migrate validate --dir file://db/migration'
     fi
+    # Exclude only the optional local server binary; cmd/api source is copied verbatim, so excluding it loses no drift coverage.
     run diff -ru --exclude=api backend "$snapshot/backend"
     if [[ -z "${TEST_DATABASE_URL:-}" ]]; then
       skip 'Live PostgreSQL integration' 'Start compose PostgreSQL; export TEST_DATABASE_URL (backend/docs/checks.md)' 'cd backend && go test -race -count=1 ./... with TEST_DATABASE_URL'

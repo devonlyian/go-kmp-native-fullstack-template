@@ -1,3 +1,6 @@
+# Record finalized platform mappings and real naming/behavior exceptions only.
+# Identical Figma/Android/iOS names resolve by convention and do not need entries.
+# Never put GraphQL fields in this map.
 tokens:
   color/background: { android: AppColors.background, ios: AppColors.background }
   color/onSurface: { android: AppColors.onSurface, ios: AppColors.onSurface }
