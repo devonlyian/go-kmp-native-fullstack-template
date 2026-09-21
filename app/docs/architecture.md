@@ -2,7 +2,7 @@
 
 [English](architecture.md) | [한국어](architecture.ko.md)
 
-The app consumes root `contracts/graphql/` through Apollo Operations and drafts SDL changes from approved design data requirements; the backend scope reviews a draft and settles the contract before server implementation. Its design does not depend on how the server stores data or implements resolvers. Read only app source and contract descriptions.
+For UI work, the app starts with an approved design, the Design System, and token correspondence using Make artifacts, existing approved Figma, or an agreed local specification. Contract-only, GraphQL connection, and other non-UI work need no design prerequisite. It implements and validates native flows with local fixtures/test doubles before creating a new GraphQL contract. After flow validation, app drafts needed root `contracts/graphql/` changes and backend reviews and settles them with app before server implementation. The app then consumes agreed SDL through Apollo Operations. Its design does not depend on server storage or resolver implementation. Read only app source and relevant contract descriptions.
 
 | Location | Responsibility |
 | --- | --- |
@@ -11,10 +11,10 @@ The app consumes root `contracts/graphql/` through Apollo Operations and drafts 
 | `app/iosApp/` | SwiftUI, native Observation, lifecycle, navigation, native UI state |
 | `app/design/` | Component/Token naming and actual mapping exceptions |
 
-Shared contains no presentation. Use contract-derived names; PascalCase Swift directories are the same feature. Start with `system`; add domains/navigation only for actual requirements. Do not copy backend DDD layers into UI modules.
+Shared contains no presentation. Derive names from approved product concepts before a contract exists and reconcile them at contract settlement; PascalCase Swift directories are the same feature. Start with `system`; add domains/navigation only for actual requirements. Do not copy backend DDD layers into UI modules.
 
-Build app-owned Operations and fixtures from the SDL; distinguish valid false/empty data, GraphQL errors, transport errors, and cancellation. Without a running service, use contract-aligned repository or HTTP test doubles. This is a development/testing approach, not an installed standalone Mock server. Record real API integration as unverified until checked against an available endpoint.
+Before contract agreement, use app-owned models and local repository test doubles to exercise real navigation, state, and local behavior. Mark fixtures and remote behavior assumptions as provisional; they are not a second API specification. After agreement, align models/fixtures, generate app-owned Operations from root SDL, and connect GraphQL adapters. Distinguish valid false/empty data, GraphQL errors, transport errors, and cancellation. Without a running service, use contract-aligned repository or HTTP test doubles; no standalone Mock server is required. After backend delivery, record real API integration as unverified until the requested checks pass against a provided endpoint.
 
-For UI changes, establish approved Figma or agreed design before implementation, reuse existing native components and semantic Tokens, and review actual screens, text scaling, dark mode, and accessibility. This template has no approved Figma file or Code Connect connection; mapping does not prove pixel parity.
+For UI changes, use approved Make artifacts, existing approved Figma designs, or an agreed local specification with the Design System reference. Match semantic Tokens and components before app development, independently of GraphQL; keep planned native symbols in the design handoff until implemented and record only actual mapping exceptions. Review actual screens, text scaling, dark mode, and accessibility. This template has no approved Figma file or Code Connect connection; mapping does not prove pixel parity.
 
 Use [develop-app](../../.agents/skills/develop-app/SKILL.md), [app checks](checks.md), and the relevant [Android](android.md) or [iOS](ios.md) guide. Physical-device performance, camera behavior, battery use, signing, and distribution require their own evidence.

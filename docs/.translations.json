@@ -1,59 +1,59 @@
 {
   ".agents/skills/design-app/SKILL.md": {
-    "en": "eaa92d4b3788dae233f20bd02696f89ed1079c23bc55ffbed6214a536dc9d3ca",
-    "ko": "b4b0ad981125c33a93f314c4e6407ce4b42e87ab00658bf9fcf7dfdf725ed0a3"
+    "en": "146c3f382b7cbb4d6cc57d44ec7a2f9efa83b2b55232bdab1e94f228bce03639",
+    "ko": "cc212a220f2487704ed0a84642acb7fa1569bb109d691da061ac5486872123f2"
   },
   ".agents/skills/develop-app/SKILL.md": {
-    "en": "668c81f5ed3761fc9fe751626a9bc51023b50d3811a50e227172a22a4269254a",
-    "ko": "c94fbf208d789183483b321ceb300fc98ef651e521d04cefc014dbf065f5bceb"
+    "en": "63fbf2a03c695abb597c33d86fe8bb1d645c044bff081a8ef0fdcd989b1f8862",
+    "ko": "92177b19a6f0ac0c5dd86e2f632d54fe347ca9ffe8843befa2932ceb68a480c9"
   },
   ".agents/skills/develop-backend/SKILL.md": {
-    "en": "d5c19cb1b1dd7e3bf8eb3c7494e5aeb1b69d18b878c787aee0faeb68d2ea76ed",
-    "ko": "7de58ee249ed6344ac4558cd536f920e3589537de2bf4e33f56fd4866e5c806e"
+    "en": "c0153dcb3712f6dd159d4cddea6e854faf8eece2f6814133222c2cffe42621f3",
+    "ko": "6a3c7b661b6dab3d04f25db3c49b174014a985b63372453f5abc2e2957991eae"
   },
   ".agents/skills/plan-feature/SKILL.md": {
-    "en": "648209a6e699490c639dfdb60044e9fb3b39e2e6590f680d5aa4f86b73ca080c",
-    "ko": "6f23d8dcf262ae6eb9fce7da57c0ce373672328af5b84ee089691db47ff48fd2"
+    "en": "cd860f803b9446362b89e583a61d5b3a4f1df3cd04845cbbf667533675b4db68",
+    "ko": "7cb2d4e35bd7ed435c7bd027f32891d14add7e31defa601afe533f2938d324f3"
   },
   ".agents/skills/sync-docs/SKILL.md": {
     "en": "a886ee60bd36f3c871fd69c79c7a87d0328f284d02189a450eb1814b5a4784df",
     "ko": "8a5f96d818c11db9d71867d2daff722798b44c128ba37b9080866c906e9fe2df"
   },
   ".agents/skills/verify-change/SKILL.md": {
-    "en": "6896d2cda7211a3bb00512fe3acaf0c6447f7ccc45853fada10127cee2d93508",
-    "ko": "a22a9558d7ba102b65fd25e4aa344e95802213969effe961208da22c007be4da"
+    "en": "a7046565ab059cad60c4f834565d251df4e11a74434d6c207102c337a85fd264",
+    "ko": "33f0eb7245724acf6095918b0cc54596d24ff25e6d08a243bb583946a82f7a6a"
   },
   "AGENTS.md": {
-    "en": "543f6f6c89d58467f816b40babd4583aedddfae5f881fb19daf3cbeebb73f2d8",
-    "ko": "407846a271fe0eccdeebff2fe7a2523d43f5e4ed162713ddbe9bd29390523ef5"
+    "en": "c04e4038cab4f3532720583f9cb1738536c1139fd9ce8a04ca8e53318274b355",
+    "ko": "1c5b894733c113a1a81df6b3347c8eda702a6ca574594b42b047f49d91b23166"
   },
   "README.md": {
     "en": "f564bc10794e8945ba30b1cdd1d464ea1583fe810967148d0a3db0912e0d036c",
     "ko": "ca07abf0833aaad90bb037a52e72ee41ff3342030f8058d96721f80550a08966"
   },
   "app/AGENTS.md": {
-    "en": "5b5dc35db9f796f155cd741265fd4121d018f754c3d9f8ec2a72001ce170c4d8",
-    "ko": "7bf15a7b0e52e220aeb121dc4aeb52608a208619acc9989b8e41a26ef4816cca"
+    "en": "0cabc2ba63790b638b0b9474b418091823541bc938a021210eaf68d5c6ad3e96",
+    "ko": "ec0f7337449d08a423c68dc014cc9a05de49eca61642ad1fcb7e3a4cf93e3554"
   },
   "app/design/AGENTS.md": {
-    "en": "0ef16cc44fd86bd9285cb3f6476991b11cbd5b0ec358ee81b3299efc062537bb",
-    "ko": "334744af794237e356addeed4fb07c4ce7e77bd647efe6e3254e55492414a7ed"
+    "en": "25f95eecc004533729640693ba3bda8fe56e18acd6a5259626aec961bbdc17a5",
+    "ko": "49b7e2f76e794b2a3e3edc9e976a99189a0d42143fdb49a28a2f71fd38727977"
   },
   "app/docs/android.md": {
     "en": "e06692e0bcfb3936c50c22a7fc792a4f9728b57323259f4f03789bad56cd4dc9",
     "ko": "78a44ec2b93f03a4914d8834f1a0f113444450481597b2b201ab3d542371625a"
   },
   "app/docs/architecture.md": {
-    "en": "3e2fc1c779fb0812a7fb26ac8b963576a0dff1179bf982ee9b8973484eab5e90",
-    "ko": "24aa50d5c2d78649d91c4e89a0e45f91de63047744891500d7f248df4f09dc96"
+    "en": "a440368375f21e43a345215c6e609e6592d0db6cdabbdb0a9ffaea3e1ae875e5",
+    "ko": "9bcb3e8a9380504785a2a779f7041db5f023ef9262a7baf8f8d81fd06006913a"
   },
   "app/docs/checks.md": {
     "en": "d94afec3f03a6fea47afd1c0cd8e52347234303089e56f59953eca9b8fc5a1b9",
     "ko": "58cde6c3a64727de6cdf35c6fbb147328c15d417a76f44d95c338b4b1d6135d5"
   },
   "app/docs/features/_template.md": {
-    "en": "5fcd5668179566e9d81390d17ea778b94364c2e2818e505625d045cbcf4be547",
-    "ko": "5592af9507039443788375daac5e030713c2a624c43b96385a59067e8aeb9e6e"
+    "en": "fab63ccc12d568401ce922b83a2f2980bb59c5efdd893ad80162a7659ccfdbcd",
+    "ko": "a64e71696055ea8f51c4c833118510096047b2a92608016961dc8b52bf891280"
   },
   "app/docs/index.md": {
     "en": "d7ff5ec1a5648056ad62f47983bf62662c332d1fa059d35572c04138a2241347",
@@ -68,8 +68,8 @@
     "ko": "101cbc40f79814e6dc973f333b50424eaaf98a819287ad015292b532139a905d"
   },
   "backend/AGENTS.md": {
-    "en": "b500bb4a988dd6e036835bb8ef06006c3aa3349535e3d8b3abb7bdb968f3d41f",
-    "ko": "d11082c1eb13363d62bc7e2ddc8025d6ad0f8430a1cb8063780e1805da6e93c2"
+    "en": "49255033365001347c97a150835ea176a6c685b887c40c3afa2d69f984797393",
+    "ko": "2aecdc38469b06db726420bdd769a62529ca8a40134c2e722eeab60dbcf4ecf5"
   },
   "backend/docs/architecture.md": {
     "en": "3585c9a94935380896756428462f590917622c0519e894269bc1a676e09bbc94",
@@ -104,20 +104,20 @@
     "ko": "8d6465b8a8063ed236a12cb54460894c18a9979ab63f4634dfe032101a52bfd9"
   },
   "docs/architecture.md": {
-    "en": "10de78d67fe19e6691249a6ff0e2ffb1aa776554dfae859726f551062f6aabaa",
-    "ko": "390232f1c93bc06763b9aa8083d6e60d31a04aad09b091867a63e21941a307b6"
+    "en": "bab52cedddc3238c0a8af32804ca8d0e65335c210f6848755cafad2d8dc22351",
+    "ko": "1d0e5e782deebe477723f7c44d15b4deaf6f6208e5c5287b3d927d5cf8cda1f3"
   },
   "docs/features/_template.md": {
-    "en": "2d0043cba3d2fb4aad52ba7a480faf6cc23bcfd9583f10e4cea6bf655313f3f5",
-    "ko": "bc614f9c0eed58145e1c322d696439bade3a826b297a29b079b47da976a50be0"
+    "en": "23639e07dcf984a37bf34f50bcfc248b2bb7df0b71521eee64da9e7fc67b3959",
+    "ko": "2aa0847a1049886d85cd195dd912b475e4b91d0cc6f6859a129e8d223f8e9ffc"
   },
   "docs/features/system.md": {
     "en": "ef54d8a7ec94ba39ed4965c9f7e8c22978f031a9ae9567f1e6b6fff68dc13075",
     "ko": "d9025bd3f9b2d6415e6c80571cdac0143a00eff4cbe87962623e422615a7d0d4"
   },
   "docs/guides/automation.md": {
-    "en": "86ecb8014d8f316b62df8238ff510f4a110b403eeb3dac851f285f3ba26b587e",
-    "ko": "8caa9e296488e88f4a9586dd23359ebe3cb7112430dfa082d999fa33d9ed4e79"
+    "en": "ba546b888af80dfa113eda7746c79ddca5c9d399f6ff63e775556002a5375cc8",
+    "ko": "7c2f89febf2b9d9c7fa9dbea573a1fd0886bf46cb4ec1f0460f4dd9b76d1ddd7"
   },
   "docs/guides/checks.md": {
     "en": "b028ef862ef3680ddda1cf06c2a68370352ce2582fae1a9a3cb2aa54ecd51a3a",
@@ -132,12 +132,12 @@
     "ko": "c6ce82743664ce3ac904cf5b17a0d39987579e89aa99f3226ba35540cda8f354"
   },
   "docs/index.md": {
-    "en": "c390a4cb2b416d9c13f1164120e13e0130ea919cf4072c96705504a3d7ecbef3",
-    "ko": "cece659bc879ed4dfd24b05468f68a3c202c30b6960c6a257268d07b2adb0e39"
+    "en": "4f545c8a9f4195412adb1dae556e6ab3afb138db77c968dfb3a9548bbeff590e",
+    "ko": "0c40a73eb7e4c4fe181c32ffef7d915843b4a19f4caddf989822f88cfc10fa83"
   },
   "docs/plans/_template.md": {
-    "en": "0abaf77eb1d0613e8f8680b1328e7ab677c6144e09dfc8e8baa9a69ef6f74bab",
-    "ko": "80e8b4cdc01bd9b0f1fe97c83768dfc422497c440224b950fe33ad5d2b259e13"
+    "en": "8e87ec10796163fd86396108fc1381c44bd6c25733f631202b20c87ef1333ad0",
+    "ko": "4e01c51c32917bffd393fd58bbc5d415a5232ddff49ff7b04814878981f4d4b1"
   },
   "docs/verification.md": {
     "en": "b6bf29cf5bf5ca1213a3dfbdf8e289b672e17e16b908673107290100cf8edc9c",
