@@ -34,8 +34,8 @@
 
 ## Handoff
 
-- Design: required flows, states, content, and platform constraints:
-- Contract: actions, data concepts, outcomes, and failure semantics; no proposed SDL fields:
+- Design for Figma Make → Design System from its artifacts → token matching: required flows, states, content, and platform constraints:
+- Subsequent app validation → contract creation: actions, data concepts, outcomes, and failure semantics; no proposed SDL fields:
 - Remaining owner and next decision:
 
 This plan records product intent. It is not Figma approval, an API contract, an implementation design, or verification evidence.

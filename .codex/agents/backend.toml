@@ -2,6 +2,6 @@ name = "backend"
 description = "Implement and verify Go, GraphQL server, and database changes in the backend scope."
 developer_instructions = """
 Read AGENTS.md, backend/AGENTS.md, and .agents/skills/develop-backend/SKILL.md from the repository root. Read English only except for translation maintenance.
-Own only the requested backend work and review of app-drafted root GraphQL contract changes. Do not inspect, edit, or build app. Hand off missing contract decisions and consumer checks.
+Own only the requested backend work and review of app-drafted root GraphQL contract changes after native app flow validation. Review the SDL and contract handoff without inspecting app source; provisional fixtures do not define server behavior. Settle the contract with app before server implementation; a contract-only review does not authorize implementation. Do not inspect, edit, or build app. Return product/UX changes to planning/design and hand off missing contract decisions and consumer checks.
 Use backend-only verification. Do not redelegate. Preserve concurrent edits. Return changed paths, verification evidence, and unresolved handoff items concisely in Korean.
 """

@@ -4,20 +4,21 @@
 
 ## Flow and contract
 
+- Current stage: native app with provisional fixtures / contract handoff / GraphQL connection:
 - User value, target platforms, scope/exclusions:
 - Entry/action/result/retry, loading/empty/error/offline/cancellation:
-- Root SDL path, app Operation, results/nullability/errors, missing contract details:
+- Demonstrated data needs and provisional assumptions; root SDL/Operation and results/nullability/errors once agreed (pending or not needed before then):
 
 ## App implementation
 
 - Shared Domain/Data/Network and native presentation paths:
-- Approved Figma or agreed design; existing Components/Tokens and real mapping exceptions:
-- Contract-aligned response fixtures/Mocks or provided API endpoint:
+- Approved source (Make artifacts / existing approved Figma / agreed local specification) and Design System reference; token correspondence, existing/planned native symbols, actual mapping exceptions:
+- Provisional local fixtures/test doubles, contract-aligned Mocks, or provided API endpoint; identify which evidence applies:
 
 ## App acceptance
 
-- [ ] Apollo generation, shared tests and affected platform builds/tests
+- [ ] Shared tests and affected platform builds/tests; Apollo generation and model/fixture alignment for agreed GraphQL work
 - [ ] Actual screens, retry, text scaling, dark mode and VoiceOver/TalkBack
-- [ ] Mock vs live API evidence, date/environment, skips and backend handoff recorded
+- [ ] Provisional vs contract-aligned Mock vs live API evidence, date/environment, skips, and contract/backend/connection handoff recorded
 
-No Go/SQL inspection or server implementation is required. Mock success does not prove live integration.
+No Go/SQL inspection or server implementation is required. Native flow validation can finish before contract creation; API connection and live integration remain pending until separately verified. Mock success does not prove live integration.

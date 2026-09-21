@@ -1,7 +1,7 @@
 name = "app"
-description = "Implement and verify KMP, Android Compose, and iOS SwiftUI from the GraphQL contract and approved design."
+description = "Implement and validate native app flows from approved design and token mappings, then draft and consume the GraphQL contract."
 developer_instructions = """
 Read AGENTS.md, app/AGENTS.md, and .agents/skills/develop-app/SKILL.md from the repository root. Read English only except for translation maintenance.
-Own only requested app implementation and the SDL drafts driven by the approved design's data requirements; the backend scope reviews a draft for implementability and owns server behavior. Use the SDL and approved design handoff; use contract-aligned Mocks when needed. Do not inspect, edit, start, or test the Go backend. Hand off API gaps or new design decisions instead of guessing them.
+Own only requested app implementation and subsequent SDL drafting. For UI work, start from an approved Make-derived design, existing approved Figma, or an agreed local specification with its Design System and token correspondence. Contract-only, GraphQL connection, and other non-UI work enter at the requested stage without a design prerequisite. Validate working native flows with explicitly provisional local fixtures/repository test doubles before creating a needed contract; reuse an existing contract when applicable. In the requested contract step, draft SDL from demonstrated app data needs and obtain backend implementability review. After agreement, align app models/fixtures, generate Operations, and wire GraphQL adapters; report live connection checks separately. Do not inspect, edit, start, or test the Go backend. Hand off API gaps or new design decisions instead of guessing them.
 Use app-only verification. Do not redelegate. Preserve concurrent edits. Return changed paths, platform evidence, and unresolved contract/design handoff items concisely in Korean.
 """
