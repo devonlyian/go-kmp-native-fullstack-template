@@ -13,15 +13,17 @@ Codex는 `.codex/agents/`에서 프로젝트 역할을 찾는다. 부모의 모�
 | `planning` | 제품 가치·범위·흐름·규칙·완료 조건·승인 상태 | [plan-feature](../../.agents/skills/plan-feature/SKILL.ko.md) |
 | `backend` | Go·DB·서버 검증과 앱이 작성한 GraphQL 계약 draft의 검토·확정 | [develop-backend](../../.agents/skills/develop-backend/SKILL.ko.md) |
 | `app` | 로컬 fixture로 네이티브 흐름 구현·검증, 이후 SDL 작성·GraphQL 연동 | [develop-app](../../.agents/skills/develop-app/SKILL.ko.md) |
-| `design` | Figma Make 디자인·산출물 기반 Design System·앱 개발 전 토큰 매칭·시각 검토 | [design-app](../../.agents/skills/design-app/SKILL.ko.md) |
+| `design` | Figma MCP 도구로 Figma에 직접 디자인·ui-ux-pro-max 방향 시드(선택)·승인된 파일 기반 Design System·앱 개발 전 토큰 매칭·시각 검토 | [design-app](../../.agents/skills/design-app/SKILL.ko.md) |
 
 요청된 역할만 사용한다. 한정된 작업·허용 경로·관련 기획/계약/디자인 참조·완료 조건만 전달하고 지원되는 경우 새 문맥을 사용한다. 매 작업마다 모든 역할을 실행하거나 작업자에게 재위임을 요구하지 않는다. 메인 에이전트가 범위를 정하고 간결한 결과를 통합한다. 동시에 수정하는 작업자에게 기획 문서·디자인 매핑·번역 검토 기록을 포함해 겹치지 않는 소유권을 준다.
 
-기획 → Figma Make 디자인 → Make 산출물 기반 Design System → 토큰 매칭 → 네이티브 앱 개발 → GraphQL 계약 생성 → 백엔드 개발의 [기능 작업 흐름](../architecture.ko.md)을 따른다. 기존 역할 사이의 인계 단계이며 모든 역할 실행이나 orchestrator 추가 지시가 아니다. 완료된 승인은 재사용하고 기존 작업은 요청된 단계부터 시작한다.
+기획 → Figma MCP로 Figma에 직접 디자인 → 승인된 파일 기반 Design System → 토큰 매칭 → 네이티브 앱 개발 → GraphQL 계약 생성 → 백엔드 개발의 [기능 작업 흐름](../architecture.ko.md)을 따른다. 기존 역할 사이의 인계 단계이며 모든 역할 실행이나 orchestrator 추가 지시가 아니다. 완료된 승인은 재사용하고 기존 작업은 요청된 단계부터 시작한다.
 
-기획은 `docs/plans/`에 구현 방식과 독립된 초안을 두며 Figma·GraphQL·데이터베이스·백엔드·앱 구현을 조사하거나 수정하지 않는다. 디자인은 실제 Make 산출물로 승인된 Design System·토큰 대응을 앱 개발 전에 정하며 GraphQL과 독립적으로 진행한다. 재사용·검토를 위해 대상 네이티브 컴포넌트·화면을 읽을 수 있지만 GraphQL은 읽지 않고 프로덕션 코드를 수정하지 않는다. 앱은 임시 로컬 fixture로 동작하는 네이티브 흐름을 검증한 뒤 요청된 계약 단계에서 필요한 루트 SDL을 작성한다. backend는 계약 인계를 검토하고 서버 구현 전에 app과 확정하며 양쪽 모두 상대 소스를 읽지 않는다. app은 합의 뒤 모델·fixture·Apollo Operation을 맞추고 백엔드 완성 뒤 요청된 연결 검사를 수행한다. fixture·계약에 맞춘 Mock·실제 연동 증거는 구분해 보고한다. 새 디자인 결정은 검토가 필요하며 승인된 기준은 반복 승인하지 않는다. 빈 부분이나 사용할 수 없는 도구는 동작을 지어내지 않고 보고한다. 역할 지침은 안내이며 파일 시스템 접근 통제가 아니다.
+기획은 `docs/plans/`에 구현 방식과 독립된 초안을 두며 Figma·GraphQL·데이터베이스·백엔드·앱 구현을 조사하거나 수정하지 않는다. 디자인은 vendored `ui-ux-pro-max` 검색 도구로 시각 방향 시드를 선택적으로 뽑고 Figma MCP 도구로 Figma에 직접 그리며, 실제 승인된 Figma 파일로 Design System·토큰 대응을 앱 개발 전에 정한다. GraphQL과 독립적으로 진행한다. 재사용·검토를 위해 대상 네이티브 컴포넌트·화면을 읽을 수 있지만 GraphQL은 읽지 않고 프로덕션 코드를 수정하지 않는다. 앱은 임시 로컬 fixture로 동작하는 네이티브 흐름을 검증한 뒤 요청된 계약 단계에서 필요한 루트 SDL을 작성한다. backend는 계약 인계를 검토하고 서버 구현 전에 app과 확정하며 양쪽 모두 상대 소스를 읽지 않는다. app은 합의 뒤 모델·fixture·Apollo Operation을 맞추고 백엔드 완성 뒤 요청된 연결 검사를 수행한다. fixture·계약에 맞춘 Mock·실제 연동 증거는 구분해 보고한다. 새 디자인 결정은 검토가 필요하며 승인된 기준은 반복 승인하지 않는다. 빈 부분이나 사용할 수 없는 도구는 동작을 지어내지 않고 보고한다. 역할 지침은 안내이며 파일 시스템 접근 통제가 아니다.
 
-요청 예시: “planning으로 이 기능 기획을 작성해줘”, “design으로 승인된 Figma Make 파일에서 Design System과 토큰 매핑을 만들어줘”, “app으로 승인된 네이티브 흐름을 로컬 데이터로 구현하고 검증해줘”, “app으로 검증된 흐름에서 GraphQL 계약을 작성하고 backend로 계약만 검토해줘”, “backend로 합의된 Query를 구현해줘”. 전체 영역 통합은 별도로 요청한다.
+요청 예시: “planning으로 이 기능 기획을 작성해줘”, “design으로 승인된 Figma 파일에서 Design System과 토큰 매핑을 만들어줘”, “app으로 승인된 네이티브 흐름을 로컬 데이터로 구현하고 검증해줘”, “app으로 검증된 흐름에서 GraphQL 계약을 작성하고 backend로 계약만 검토해줘”, “backend로 합의된 Query를 구현해줘”. 전체 영역 통합은 별도로 요청한다.
+
+`.agents/skills/` 아래 `ui-ux-pro-max` 스킬군은 `ui-ux-pro-max-cli` 패키지가 설치한 vendored 사본이다. CLI 업그레이드 뒤 `uipro update`로 갱신하고 결과 diff를 검토한 뒤 커밋한다.
 
 ## 종료 훅
 

@@ -4,14 +4,14 @@
 
 Choose one scope. Read English only except for translation work or explicit requests. The README remains project information, not a development entrypoint.
 
-For a new feature, follow [the workflow](architecture.md): planning → Figma Make design → Design System from Make artifacts → token matching → native app development → GraphQL contract creation → backend development. Reuse approved outputs and existing contracts; enter at the requested stage for scoped fixes.
+For a new feature, follow [the workflow](architecture.md): planning → Figma design via Figma MCP → Design System from the approved file → token matching → native app development → GraphQL contract creation → backend development. Reuse approved outputs and existing contracts; enter at the requested stage for scoped fixes.
 
 | Work | Entry |
 | --- | --- |
 | Planning: product value, scope, flows, and acceptance | [plan-feature](../.agents/skills/plan-feature/SKILL.md), [plan template](plans/_template.md) |
 | Backend: Go, GraphQL server, DB | [Backend docs](../backend/docs/index.md) |
 | App: KMP, Android, iOS | [App docs](../app/docs/index.md) |
-| Design: Figma Make artifacts, Design System, token matching, visual handoff | [Design rules](../app/design/AGENTS.md), [design-app](../.agents/skills/design-app/SKILL.md) |
+| Design: Figma design, Design System, token matching, visual handoff | [Design rules](../app/design/AGENTS.md), [design-app](../.agents/skills/design-app/SKILL.md) |
 | Agents and Stop hook setup | [Automation](guides/automation.md) |
 | Shared API decision or handoff | Root `contracts/graphql/` and [contract boundary](architecture.md) |
 | New repository setup | [Template adoption](guides/new-project.md) |

@@ -12,7 +12,7 @@
 ## 앱 구현
 
 - Shared Domain/Data/Network와 네이티브 Presentation 경로:
-- 승인된 원본(Make 산출물 / 기존 승인 Figma / 합의된 로컬 명세)과 Design System 참조, 토큰 대응·기존/계획된 네이티브 심볼·실제 매핑 예외:
+- 승인된 원본(승인된 Figma 파일 / 합의된 로컬 명세)과 Design System 참조, 토큰 대응·기존/계획된 네이티브 심볼·실제 매핑 예외:
 - 임시 로컬 fixture·테스트 대역, 계약에 맞춘 Mock, 제공된 API endpoint 중 해당 증거 종류:
 
 ## 앱 완료 조건
