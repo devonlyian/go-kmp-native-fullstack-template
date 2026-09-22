@@ -14,6 +14,13 @@ IGNORED = {
     ".git", ".gradle", ".kotlin", "build", "DerivedData", ".tools",
     ".verification", "__pycache__", ".venv", "node_modules",
 }
+# Vendored upstream skill bundles keep their own docs; we do not translate them.
+VENDORED = (
+    ".agents/skills/banner-design/", ".agents/skills/brand/",
+    ".agents/skills/design/", ".agents/skills/design-system/",
+    ".agents/skills/slides/", ".agents/skills/ui-styling/",
+    ".agents/skills/ui-ux-pro-max/",
+)
 
 
 def english_path(path):
@@ -30,7 +37,10 @@ def snapshot(root):
         directories[:] = sorted(name for name in directories if name not in IGNORED)
         for name in files:
             if name.endswith(".md"):
-                documents.add((Path(directory) / name).relative_to(root).as_posix())
+                relative = (Path(directory) / name).relative_to(root).as_posix()
+                if relative.startswith(VENDORED):
+                    continue
+                documents.add(relative)
     pairs, errors = {}, []
     for english in sorted({english_path(path) for path in documents}):
         korean = korean_path(english)

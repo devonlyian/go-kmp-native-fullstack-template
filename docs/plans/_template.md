@@ -34,7 +34,7 @@
 
 ## Handoff
 
-- Design for Figma Make → Design System from its artifacts → token matching: required flows, states, content, and platform constraints:
+- Design for direct Figma design → Design System from the approved file → token matching: required flows, states, content, and platform constraints:
 - Subsequent app validation → contract creation: actions, data concepts, outcomes, and failure semantics; no proposed SDL fields:
 - Remaining owner and next decision:
 

@@ -12,7 +12,7 @@
 ## App implementation
 
 - Shared Domain/Data/Network and native presentation paths:
-- Approved source (Make artifacts / existing approved Figma / agreed local specification) and Design System reference; token correspondence, existing/planned native symbols, actual mapping exceptions:
+- Approved source (approved Figma file / agreed local specification) and Design System reference; token correspondence, existing/planned native symbols, actual mapping exceptions:
 - Provisional local fixtures/test doubles, contract-aligned Mocks, or provided API endpoint; identify which evidence applies:
 
 ## App acceptance
