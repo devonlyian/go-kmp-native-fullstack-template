@@ -7,14 +7,14 @@
 | Stage | Owner | Output for the next stage |
 | --- | --- | --- |
 | 1. Planning | `planning` | Approved product scope, flows, states, and acceptance in `docs/plans/` |
-| 2. Figma Make design | `design` | Reviewed design and actual Make file/artifact references, including platform differences |
-| 3. Design System creation | `design` | Approved Figma components, variants, and semantic tokens derived from the Make artifacts |
+| 2. Figma design | `design` | An optional ui-ux-pro-max direction seed when no visual direction is approved, then one proof screen approved in Figma via the Figma MCP tools, then the full design with file/node references and platform differences; each task is recorded under `app/design/history/` |
+| 3. Design System creation | `design` | Approved Figma components, variants, and semantic tokens derived from the approved Figma file |
 | 4. Design token matching | `design` | Figma-to-native token/component correspondence; actual exceptions in `app/design/design-system-map.yaml`, planned new symbols in the handoff |
 | 5. Native app development | `app` | Working Compose/SwiftUI flows with local fixtures/test doubles, platform and visual evidence, and demonstrated data needs |
 | 6. GraphQL contract creation | `app` drafts, `backend` reviews | Agreed root SDL with inputs, outputs, nullability, and failure semantics based on the implemented app flows |
 | 7. Backend development | `backend` | Server implementation and backend checks against the agreed contract; endpoint and consumer handoff |
 
-Token matching does not wait for GraphQL. Inspect the actual Make artifacts before deriving the Design System; do not claim that a Make prototype already supplies an approved component library or native app implementation. Reuse existing approvals. Record unresolved design or data decisions in the owning handoff.
+Token matching does not wait for GraphQL. Inspect the actual approved Figma file before deriving the Design System; do not claim that a direction seed or an unapproved draft already supplies an approved component library or native app implementation. Reuse existing approvals. Record unresolved design or data decisions in the owning handoff.
 
 Before the contract exists, app work includes native screens, navigation, state, local behavior, and app-owned models/test doubles needed to validate the flow. Provisional fixtures describe UX examples, not server response guarantees. During contract handoff, align app models, Operations, and fixtures with the settled SDL and regenerate Apollo before GraphQL integration. After backend delivery, complete the requested app connection and integration checks; the earlier app stage does not prove live integration. Entirely local features need no artificial GraphQL contract or backend work.
 

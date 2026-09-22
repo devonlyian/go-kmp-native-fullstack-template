@@ -114,6 +114,12 @@ class DocumentationChecks(unittest.TestCase):
         self.assertEqual(self.run_check([".agents/skills/sync-docs/SKILL.md"]), 0)
         self.assertEqual(self.run_check(), 0)
 
+    def test_vendored_skill_docs_do_not_require_translation(self):
+        self.run_check(["README.md"])
+        self.write(".agents/skills/ui-ux-pro-max/SKILL.md", "# Vendored\n")
+        self.write(".agents/skills/ui-ux-pro-max/references/rules.md", "# Ref\n")
+        self.assertEqual(self.run_check(), 0)
+
     def test_partial_record_failure_does_not_write_manifest(self):
         self.run_check(["README.md"])
         before = (self.root / check_docs.MANIFEST).read_bytes()
