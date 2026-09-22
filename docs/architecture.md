@@ -7,7 +7,7 @@
 | Stage | Owner | Output for the next stage |
 | --- | --- | --- |
 | 1. Planning | `planning` | Approved product scope, flows, states, and acceptance in `docs/plans/` |
-| 2. Figma design | `design` | Reviewed design drawn directly in Figma via the Figma MCP tools, with file/node references and platform differences; an optional ui-ux-pro-max direction seed precedes drawing when no visual direction is approved |
+| 2. Figma design | `design` | An optional ui-ux-pro-max direction seed when no visual direction is approved, then one proof screen approved in Figma via the Figma MCP tools, then the full design with file/node references and platform differences; each task is recorded under `app/design/history/` |
 | 3. Design System creation | `design` | Approved Figma components, variants, and semantic tokens derived from the approved Figma file |
 | 4. Design token matching | `design` | Figma-to-native token/component correspondence; actual exceptions in `app/design/design-system-map.yaml`, planned new symbols in the handoff |
 | 5. Native app development | `app` | Working Compose/SwiftUI flows with local fixtures/test doubles, platform and visual evidence, and demonstrated data needs |

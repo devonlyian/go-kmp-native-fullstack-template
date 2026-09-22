@@ -1,7 +1,7 @@
 {
   ".agents/skills/design-app/SKILL.md": {
-    "en": "241005afe09c6d1b23564c1898b54b7892262bf0aa4473af417f6792ade5692c",
-    "ko": "3c95e8f60e185c32fbf64b7b976e23bf38c363d9f5ba472bdfbb7987a1db2944"
+    "en": "d3b6822ca8312bbe50f56eb1319f16071dd13003c9b661bf20256021e6a5d505",
+    "ko": "f4fe78d3d000020e6d12469917b594c32218963cbe59de88c7c816f1cec24421"
   },
   ".agents/skills/develop-app/SKILL.md": {
     "en": "c715b6df095acbc2c332c024924aaab41c1cec67cdeaa56f42cfbb9cf123ba64",
@@ -24,8 +24,8 @@
     "ko": "33f0eb7245724acf6095918b0cc54596d24ff25e6d08a243bb583946a82f7a6a"
   },
   "AGENTS.md": {
-    "en": "16610e154b5684bd90a901d314eed3d4ad2abd59ed256432e9c79713f19cab15",
-    "ko": "e06b64e58d2338a783f14d03f4536e855a4cd74edf02a7a78c966f50344b5cfc"
+    "en": "c29845d8321f2311236cb280265be4aa667fcb3ed934b01cbee46e5790d5266f",
+    "ko": "b2450dfddb7862e518cfcf2c539e978917046603e8a24de6eea6b9add6ef91fd"
   },
   "README.md": {
     "en": "b92cdf7cca186b26a102d179abc088f7578aad427ab768502ef9e7cded1630f6",
@@ -36,8 +36,12 @@
     "ko": "c143d39067a2d310d85c73f883ac89df848db98535f26de8ef9712f0d8ed4d45"
   },
   "app/design/AGENTS.md": {
-    "en": "19263465d57bd523c4afa999bc4620c90c002bf220752ea46921064457ed573b",
-    "ko": "7f7bfe43c37ef2ab3d2b96677aadc43ae648263768bd5922eee3c194eb77cdd2"
+    "en": "09930227f0ab8e8e01a21fb9892927dec31f1dc2eb579977f0f53b0b78b48c4e",
+    "ko": "803e9186fecaff4464333c99d52946c3683fdf20bfe9e742ae5eef9c4f739563"
+  },
+  "app/design/history/_template.md": {
+    "en": "e2ca15c0584ba26143399d3ed118d2f53d335856b7c9804288169c081633b5a8",
+    "ko": "c5ccfce2fda131be7c49d34a5d7b60bfc1b1d1c6f3a9c1abdf84196a91c4dcc8"
   },
   "app/docs/android.md": {
     "en": "e06692e0bcfb3936c50c22a7fc792a4f9728b57323259f4f03789bad56cd4dc9",
@@ -104,8 +108,8 @@
     "ko": "8d6465b8a8063ed236a12cb54460894c18a9979ab63f4634dfe032101a52bfd9"
   },
   "docs/architecture.md": {
-    "en": "f56f35ccdcb619c47a2b721a8bdf918d5ac4bdfe77e881589976738248147461",
-    "ko": "d70913c4c66a01b7c12d9da1086af009eb2e70eca6b8e54906baf0727d6abbd1"
+    "en": "6ef21f7db8f9c018a31300e97d393376f2523cff0d95bef456d2c4e0091ad4c2",
+    "ko": "9cd517db1ce20dca759c1b5a42c09ee89f50677bec1119448dedcca8dceb7011"
   },
   "docs/features/_template.md": {
     "en": "23639e07dcf984a37bf34f50bcfc248b2bb7df0b71521eee64da9e7fc67b3959",
@@ -116,8 +120,8 @@
     "ko": "d9025bd3f9b2d6415e6c80571cdac0143a00eff4cbe87962623e422615a7d0d4"
   },
   "docs/guides/automation.md": {
-    "en": "a69fbada032aab8fc1bff153106655dee67081054e940a6253d72c05062cfc5d",
-    "ko": "f2fe14a9e01d3ab97fe29053481756f6b44554ae85583068093e21fff0768cf0"
+    "en": "09083a95c1efbf25ea8c2f1a31db91a1360998d38d62bf5223690ad513a2a918",
+    "ko": "65d544bad4a6528e6bc6db1b74fc13a0c42f9a1d8aae0915b9633e1de612ba4e"
   },
   "docs/guides/checks.md": {
     "en": "b028ef862ef3680ddda1cf06c2a68370352ce2582fae1a9a3cb2aa54ecd51a3a",
