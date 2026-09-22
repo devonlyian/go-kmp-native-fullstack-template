@@ -7,7 +7,7 @@
 | 단계 | 담당 | 다음 단계에 전달할 산출물 |
 | --- | --- | --- |
 | 1. 기획 | `planning` | `docs/plans/`의 승인된 제품 범위·흐름·상태·완료 조건 |
-| 2. Figma 디자인 | `design` | Figma MCP 도구로 Figma에 직접 그린 검토된 디자인과 파일·노드 참조, 플랫폼 차이. 승인된 시각 방향이 없으면 그리기 전에 ui-ux-pro-max 방향 시드를 선택적으로 실행한다 |
+| 2. Figma 디자인 | `design` | 승인된 시각 방향이 없으면 ui-ux-pro-max 방향 시드(선택), Figma MCP로 시제품 화면 하나를 승인받은 뒤 전체 디자인과 파일·노드 참조, 플랫폼 차이. 각 작업은 `app/design/history/`에 기록한다 |
 | 3. 디자인 시스템 생성 | `design` | 승인된 Figma 파일에서 도출한 승인된 Figma 컴포넌트·Variant·의미 기반 토큰 |
 | 4. 디자인 토큰 매칭 | `design` | Figma와 네이티브의 토큰·컴포넌트 대응, `app/design/design-system-map.yaml`의 실제 예외, 인계 문서의 신규 심볼 계획 |
 | 5. 네이티브 앱 개발 | `app` | 로컬 fixture·테스트 대역으로 동작하는 Compose·SwiftUI 흐름, 플랫폼·화면 검증 증거, 확인된 데이터 요구 |
