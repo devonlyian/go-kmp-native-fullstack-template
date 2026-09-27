@@ -16,6 +16,7 @@
 | 공통 API 결정·인계 | 루트 `contracts/graphql/`과 [계약 경계](architecture.ko.md) |
 | 새 저장소 설정 | [템플릿 사용](guides/new-project.ko.md) |
 | 문서 관리 | [sync-docs](../.agents/skills/sync-docs/SKILL.ko.md) |
+| 제품 언어: 한국어/영어 동작과 영역별 인계 | [제품 i18n 정책](i18n.ko.md) |
 
 백엔드와 앱은 서로의 구현을 읽어 개발하지 않는다. 앱은 계약 생성 전에 임시 로컬 fixture로 네이티브 흐름을 검증하고 GraphQL 연동·백엔드 구현에는 합의된 SDL을 사용한다. 상대 영역의 남은 일은 인계한다. 전체 스택 통합은 별도로 요청한다.
 

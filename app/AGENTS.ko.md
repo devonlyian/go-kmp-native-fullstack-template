@@ -5,6 +5,7 @@
 범위는 `app/`(Shared·Android·iOS), 해당 문서·앱 도구/설정, 이 범위가 소유하는 루트 `contracts/graphql/` 계약 draft이다. 앱 동작을 추측하려고 Go resolver·Repository·DB Schema·백엔드 문서를 읽지 않는다. SDL과 그 설명을 소비하며 계약의 빈 부분은 추측하거나 서버를 구현하는 대신 보고한다.
 
 - KMP는 Domain/Data/Network만 공유한다. `shared/`에 Compose·SwiftUI·ViewModel·Navigation·화면 상태를 두지 않는다. Android는 Compose/ViewModel, iOS는 SwiftUI/네이티브 `@Observable` 상태를 쓴다.
+- 영향받는 UI는 [제품 i18n](../docs/i18n.ko.md)을 따른다. 네이티브 현지화 리소스로 한국어·영어를 제공하고 UI 번역은 Shared 밖에 두며 각 대상 플랫폼을 두 언어로 검증한다. 기획에서 승인된 언어 동작과 콘텐츠 예외를 사용한다.
 - Shared·Android `feature/<domain>`과 Swift `Features/<Domain>`에서 기능 이름을 일관되게 사용한다. 계약 전에는 승인된 제품 개념에서 이름을 정하고 계약 확정 때 조율한다. 짧은 소문자 단수형 이름을 쓰고 Swift는 PascalCase다. 초기 기능은 `system`이며 예시 비즈니스 도메인을 추가하지 않는다.
 - UI 작업은 디자인·Design System·토큰 대응이 승인되면 네이티브 흐름을 개발하며 승인된 Figma 파일·합의된 로컬 명세를 사용한다. 계약 전용·GraphQL 연결·그 밖의 비-UI 변경은 디자인 선행 조건 없이 요청된 단계부터 진행한다. 새 API 계약이 없어도 로컬 fixture·Repository 테스트 대역으로 동작하는 화면·Navigation·상태·로컬 동작을 구현하고 데이터·원격 동작 가정은 임시로 표시한다. 계약이 없다고 앱 작업을 뼈대 제작에 제한하지 않는다. 해당하는 기존 계약과 계약에 맞춘 Mock이 있으면 재사용한다.
 - 앱 흐름 검증 뒤 요청된 계약 단계에서 확인된 데이터 요구로 필요한 루트 SDL 변경 draft를 작성한다. backend 영역은 구현 가능성을 검토하고 서버 작업 전에 app과 계약을 확정한다. 합의 뒤 앱 모델·fixture를 맞추고 앱 소유 Operation 수정, Apollo 재생성, GraphQL adapter 연결을 진행한다. Apollo는 루트 SDL을 직접 읽으며 생성 Kotlin은 빌드 산출물에 둔다. 백엔드 구현·DB 변경은 앱 작업이 아니다.
