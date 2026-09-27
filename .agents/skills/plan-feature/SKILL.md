@@ -9,6 +9,8 @@ description: Define and review an implementation-neutral feature plan before des
 
 Use [the plan template](../../../docs/plans/_template.md). English is the source of truth; use [sync-docs](../sync-docs/SKILL.md) for every plan edit. Keep one plan pair per feature under `docs/plans/`; do not split the same product decision into separate PRD, flow, and acceptance documents.
 
+Apply the product defaults and planning section of [the i18n policy](../../../docs/i18n.md). Include `ko`/`en` behavior and acceptance in the plan and design handoff; record approved exceptions without selecting an implementation.
+
 1. Establish the target user, problem, expected outcome, source evidence, and requested approval. Separate user-provided facts from assumptions. Do not infer product intent from Figma, GraphQL, database, backend, or app implementation.
 2. Set in-scope and out-of-scope behavior, target platforms, product constraints, and dependencies on unresolved decisions. Describe user-visible intent without choosing UI components, API fields, storage, libraries, or architecture.
 3. Define the end-to-end flow and applicable business rules. Cover success and only the relevant empty, validation, permission, failure, retry/recovery, offline, and cancellation states. Leave native interaction choices to design.

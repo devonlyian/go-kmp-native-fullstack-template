@@ -10,6 +10,7 @@ IGNORED = {".git", ".gradle", ".kotlin", "build", "DerivedData", ".tools", ".ver
 required = (
     "AGENTS.md", "README.md", ".env.example", "compose.yaml",
     "docs/architecture.md", "docs/features/_template.md", "docs/plans/_template.md",
+    "docs/i18n.md",
     "contracts/graphql/system.graphqls", "backend/AGENTS.md", "backend/go.mod",
     "backend/gqlgen.yml", "backend/sqlc.yaml", "backend/atlas.hcl",
     "backend/cmd/api", "backend/db/schema", "backend/db/migration",

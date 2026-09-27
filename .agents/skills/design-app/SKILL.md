@@ -9,6 +9,8 @@ description: Design native app flows directly in Figma via the Figma MCP tools, 
 
 Use [design rules](../../../app/design/AGENTS.md). Read English except for translation maintenance. Keep design records in `app/design/`; do not read backend implementation or edit app code or GraphQL.
 
+Apply the product defaults and design section of [the i18n policy](../../../docs/i18n.md): provide `ko`/`en` copy and proof-screen variants, review affected text layouts in both languages, and hand off translation status and evidence with the existing design record.
+
 Enter at the requested stage and reuse approved artifacts. Existing approved Figma designs or agreed local specifications do not need to be recreated; report missing source evidence only when it is needed for the requested change. Record every design task in a paired file under `app/design/history/` using [the design record template](../../../app/design/history/_template.md), named `YYYY-MM-DD-<feature-slug>.md` / `.ko.md`; keep its status current as the work moves.
 
 Figma file convention: unless the user says otherwise, keep one Figma file per product and add one page per feature flow; record the file URL/key, page name, and node ids in the design record.
