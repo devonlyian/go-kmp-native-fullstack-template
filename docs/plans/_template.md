@@ -12,6 +12,7 @@
 - In scope:
 - Out of scope:
 - Target platforms and product constraints:
+- Product languages and behavior: `ko` + `en`, platform language preferences, English fallback; approved deviations and content exceptions (see [i18n policy](../i18n.md)):
 
 ## Flow and rules
 
@@ -25,6 +26,7 @@
 - [ ] Observable user outcome:
 - [ ] Relevant edge and recovery behavior:
 - [ ] Accessibility, privacy, and safety requirements:
+- [ ] Equivalent user outcomes in Korean and English, language selection/fallback, and relevant localized content:
 
 ## Decisions and open questions
 

@@ -26,6 +26,8 @@ Copy this file to `YYYY-MM-DD-<feature-slug>.md` and its Korean companion to `YY
 - Platforms and differences (Android/Material vs iOS/HIG):
 - States covered: loading / empty / error / retry / disabled / offline
 - Accessibility notes:
+- Korean/English copy source, review status, and approved untranslated content:
+- Language variants and visual evidence for Hangul, long English labels, wrapping, and text scaling:
 
 ## Handoff
 

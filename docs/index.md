@@ -16,6 +16,7 @@ For a new feature, follow [the workflow](architecture.md): planning → Figma de
 | Shared API decision or handoff | Root `contracts/graphql/` and [contract boundary](architecture.md) |
 | New repository setup | [Template adoption](guides/new-project.md) |
 | Document maintenance | [sync-docs](../.agents/skills/sync-docs/SKILL.md) |
+| Product languages: Korean/English behavior and scoped handoff | [Product i18n policy](i18n.md) |
 
 Backend and app do not read each other's implementation to develop. App validates native flows with provisional local fixtures before contract creation; GraphQL integration and backend implementation use agreed SDL. Record missing counterpart work as a handoff. Full-stack integration is requested separately.
 

@@ -9,6 +9,8 @@ description: Select checks within the requested backend, app, or documentation s
 
 Use English except for translation work or explicit requests. Select the requested scope before reading guides or running tools. A changed shared SDL does not authorize the other scope's build or source inspection.
 
+For app UI/localization changes, apply [i18n verification and completion](../../../docs/i18n.md#verification-and-completion). Require affected Korean/English resource coverage and per-platform runtime evidence; structure checks and successful builds alone do not prove localization. Report missing evidence explicitly. Backend localized content follows only the agreed contract and requested backend checks.
+
 | Scope | Checks and references |
 | --- | --- |
 | Markdown only | [sync-docs](../sync-docs/SKILL.md), then `./tools/verify.sh structure` |

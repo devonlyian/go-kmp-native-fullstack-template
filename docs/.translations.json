@@ -1,47 +1,47 @@
 {
   ".agents/skills/design-app/SKILL.md": {
-    "en": "d3b6822ca8312bbe50f56eb1319f16071dd13003c9b661bf20256021e6a5d505",
-    "ko": "f4fe78d3d000020e6d12469917b594c32218963cbe59de88c7c816f1cec24421"
+    "en": "babf5c82719a4858dac194bc79eff5bc1e199d660a5d03aa77de70acc908d9a4",
+    "ko": "3543945ca4175944ef6bd91abf44e4cc10c57c9fcfe6d69ff441c383349dd3f3"
   },
   ".agents/skills/develop-app/SKILL.md": {
-    "en": "c715b6df095acbc2c332c024924aaab41c1cec67cdeaa56f42cfbb9cf123ba64",
-    "ko": "6dc4e6a6a382b0c76e21723a2ee93fda243c0d5304b88f483cc892be2c7dc1fa"
+    "en": "6573fef14d9d0405bd3bb3eae197ed63160b26eae2d21c6f3f5564ec487f644a",
+    "ko": "fa3428684d3710ad2fd0aa830592f0de474a1db2211814afec5251e30bce0d56"
   },
   ".agents/skills/develop-backend/SKILL.md": {
     "en": "c0153dcb3712f6dd159d4cddea6e854faf8eece2f6814133222c2cffe42621f3",
     "ko": "6a3c7b661b6dab3d04f25db3c49b174014a985b63372453f5abc2e2957991eae"
   },
   ".agents/skills/plan-feature/SKILL.md": {
-    "en": "16c0d88e4f2c261846cfa6e6bf939f4c395b17fff104a6ee5d6b59e208dc429d",
-    "ko": "7bf77e433a18649bf60feee6f1c41eb79b14526944c0b0118241e4e40506387c"
+    "en": "ee506bcf55ded73916a90e228c03703bcf1a038f8e4b05dbbce395c3adfc7b88",
+    "ko": "826c442d743da614508b2f2c6f48d63917a1276102ee8d54bf1f9d0c3443766e"
   },
   ".agents/skills/sync-docs/SKILL.md": {
     "en": "95cd798fda70f93b9de322842211fa0c5674cacdb87405abce8f3b4469a4c9d3",
     "ko": "1770efe12e4d4fa74975672d1ec1fda34faedd50304e849af1752ede623f6b49"
   },
   ".agents/skills/verify-change/SKILL.md": {
-    "en": "a7046565ab059cad60c4f834565d251df4e11a74434d6c207102c337a85fd264",
-    "ko": "33f0eb7245724acf6095918b0cc54596d24ff25e6d08a243bb583946a82f7a6a"
+    "en": "00703d502e15f339e312b2ea9500b13e9e6e98792958b04ae6c42d8e151c22b9",
+    "ko": "18a48ace963606f881c997169ed66a32e6083d39d0242c730d6811573390ea40"
   },
   "AGENTS.md": {
-    "en": "c29845d8321f2311236cb280265be4aa667fcb3ed934b01cbee46e5790d5266f",
-    "ko": "b2450dfddb7862e518cfcf2c539e978917046603e8a24de6eea6b9add6ef91fd"
+    "en": "ca9df6771845ec64a63d62c4101f36206ddc414d89cd7f80d87604296a0faedb",
+    "ko": "48b4c0a25e8dcb50232c54715e1e4bbae7ebb31a5fd77d9185e0b26cb8c9cccf"
   },
   "README.md": {
     "en": "b92cdf7cca186b26a102d179abc088f7578aad427ab768502ef9e7cded1630f6",
     "ko": "9cbe6626f26c9dffb780ae7c0936ea86f0038d90c512fca7533ebdf9e10b802b"
   },
   "app/AGENTS.md": {
-    "en": "a003cea4ad905ef295ae821d18c588347ab8bd86f40edc8aa022476c5f0be006",
-    "ko": "c143d39067a2d310d85c73f883ac89df848db98535f26de8ef9712f0d8ed4d45"
+    "en": "ea4445d99373291c756045b0604d2e055459e092dcd3d0ebc8245ef4fc3d3b24",
+    "ko": "9228aa845b0c4c06eeaac4794d5940e21ffcc8e837529018a039f51c8ba97058"
   },
   "app/design/AGENTS.md": {
     "en": "09930227f0ab8e8e01a21fb9892927dec31f1dc2eb579977f0f53b0b78b48c4e",
     "ko": "803e9186fecaff4464333c99d52946c3683fdf20bfe9e742ae5eef9c4f739563"
   },
   "app/design/history/_template.md": {
-    "en": "e2ca15c0584ba26143399d3ed118d2f53d335856b7c9804288169c081633b5a8",
-    "ko": "c5ccfce2fda131be7c49d34a5d7b60bfc1b1d1c6f3a9c1abdf84196a91c4dcc8"
+    "en": "0723a9609da1f592a77ff6745eb18429201597185cfee953796c92a2496780ad",
+    "ko": "6a70f65656913cada19bf5a89d41c58bd2f754e999990088b4229bce43ebd8c5"
   },
   "app/docs/android.md": {
     "en": "e06692e0bcfb3936c50c22a7fc792a4f9728b57323259f4f03789bad56cd4dc9",
@@ -56,8 +56,8 @@
     "ko": "58cde6c3a64727de6cdf35c6fbb147328c15d417a76f44d95c338b4b1d6135d5"
   },
   "app/docs/features/_template.md": {
-    "en": "4e63f8a2d7b67ec9ccbdb56d94c78440aa484c61552e104476fe90c4232f9611",
-    "ko": "93c4b373e36b1f3d9e8cd777010a7906327427cafb59b128409d67b0113b621f"
+    "en": "6399baa5b6be75e0e85b7c99934364c13d61b103fafe0c391e0f3a1f7608c993",
+    "ko": "d0dccae6c36d11ea4d47dfc0213c61af95f50e16ee2959eeeb0eb0e3b8049247"
   },
   "app/docs/index.md": {
     "en": "d7ff5ec1a5648056ad62f47983bf62662c332d1fa059d35572c04138a2241347",
@@ -135,13 +135,17 @@
     "en": "b36ebb4f0cff227acf26d0802b876e547edd3fddea5e3eafc00c02f72698260b",
     "ko": "c6ce82743664ce3ac904cf5b17a0d39987579e89aa99f3226ba35540cda8f354"
   },
+  "docs/i18n.md": {
+    "en": "f84b0b28e8679e866f4f169c519003f9c9408afde73a07173484a3f970d859a4",
+    "ko": "332aa14e9bbfb271233f6ce297d2dcbb8a5eadd8216b15333d385c95873d6743"
+  },
   "docs/index.md": {
-    "en": "667d09fcf7117a6a0ec2c4b14f975fa520dfecf7538aa7bddd077b94faa8ef6d",
-    "ko": "da8dcacfa233883edaf7f9c82edbb7ffb21392b98fd2515e3772bc7519a7ba57"
+    "en": "5e16743dcfb0944228cca9d72c915d602a38a3fb9df9d76b093ca5d113b0e69d",
+    "ko": "b20cd53ccf757ff708a1245ca9affbf5634bd7a0984a974ab437c3e99b677270"
   },
   "docs/plans/_template.md": {
-    "en": "164863a6ea1c8335744dd5462bf1e92fbbc7b96ebe457887bc16fb1cf5e3b691",
-    "ko": "6332631b6b16875315cd17f8672f319252d4a01e1fe4026a44ce3ece779f4e06"
+    "en": "b2dd7927de90cb0555c9e225c05156700f15f49120a1bc6678c4466e80fe0a91",
+    "ko": "e29c61f2638f4d5f371404c917a8a3dc7c8a6be1f8b0a9a3e54f700121e18150"
   },
   "docs/verification.md": {
     "en": "b6bf29cf5bf5ca1213a3dfbdf8e289b672e17e16b908673107290100cf8edc9c",
