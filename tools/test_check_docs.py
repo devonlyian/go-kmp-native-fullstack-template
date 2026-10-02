@@ -96,6 +96,8 @@ class DocumentationChecks(unittest.TestCase):
         bin_dir = self.root / "bin"
         bin_dir.mkdir()
         (bin_dir / "dirname").symlink_to(shutil.which("dirname"))
+        (bin_dir / "mkdir").symlink_to(shutil.which("mkdir"))
+        (bin_dir / "mktemp").symlink_to(shutil.which("mktemp"))
         script = Path(__file__).with_name("verify.sh").resolve()
         result = subprocess.run(
             ["/bin/bash", str(script), "structure"],
