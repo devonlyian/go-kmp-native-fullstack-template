@@ -5,12 +5,46 @@ cd "$ROOT"
 MODE=${1:-all}
 SKIPPED=0
 case "$MODE" in all|structure|backend|app|ios) ;; *) echo "Usage: $0 [all|structure|backend|app|ios]" >&2; exit 2 ;; esac
+mkdir -p "$ROOT/.verification"
+LOG_DIR=$(mktemp -d "$ROOT/.verification/verify-$MODE.XXXXXX")
+printf 'Verification logs: %s\n' "$LOG_DIR"
 
 skip() {
   printf '\nSKIP: %s\nInstall/configure: %s\nNot run: %s\n' "$1" "$2" "$3"
   SKIPPED=$((SKIPPED + 1))
 }
-run() { printf '\nRUN: %s\n' "$*"; "$@"; }
+run() {
+  local log status
+  log=$(mktemp "$LOG_DIR/check.XXXXXX")
+  printf '\nRUN: %s\n' "$*"
+  if "$@" >"$log" 2>&1; then
+    printf 'PASS\n'
+  else
+    status=$?
+    printf 'FAIL (exit %s). Log: %s\n' "$status" "$log" >&2
+    tail -n 20 "$log" | tail -c 3000 >&2
+    printf '\n' >&2
+    return "$status"
+  fi
+}
+
+check_go_format() {
+  local unformatted
+  unformatted=$(gofmt -l .) || return $?
+  if [[ -n "$unformatted" ]]; then
+    printf 'FAIL: run go fmt ./...\n%s\n' "$unformatted"
+    return 1
+  fi
+}
+
+check_schema_drift() {
+  local drift
+  drift=$("$ATLAS" schema diff --from file://db/migration --to file://db/schema --dev-url docker://postgres/18.6/dev --format '{{ sql . " " }}') || return $?
+  if [[ -n "$drift" ]]; then
+    echo 'FAIL: DB schema and migrations differ; generate and review a migration.' >&2
+    return 1
+  fi
+}
 
 if [[ "$MODE" == all || "$MODE" == structure ]]; then
   if command -v python3 >/dev/null; then
@@ -30,8 +64,7 @@ if [[ "$MODE" == all || "$MODE" == backend ]]; then
   if command -v go >/dev/null; then
     (
       cd backend
-      unformatted=$(gofmt -l .)
-      if [[ -n "$unformatted" ]]; then printf 'FAIL: run go fmt ./...\n%s\n' "$unformatted"; exit 1; fi
+      run check_go_format
       run go vet ./...
       run go test -race -count=1 ./...
       run go build ./...
@@ -49,9 +82,7 @@ if [[ "$MODE" == all || "$MODE" == backend ]]; then
     if [[ -x "$ATLAS" ]]; then
       (cd "$snapshot/backend" && run "$ATLAS" migrate validate --dir file://db/migration && run "$ATLAS" migrate hash --dir file://db/migration)
       if command -v docker >/dev/null && docker info >/dev/null 2>&1; then
-        printf '\nRUN: Atlas migration/schema drift check in disposable PostgreSQL\n'
-        drift=$(cd "$snapshot/backend" && "$ATLAS" schema diff --from file://db/migration --to file://db/schema --dev-url docker://postgres/18.6/dev --format '{{ sql . " " }}')
-        if [[ -n "$drift" ]]; then echo 'FAIL: DB schema and migrations differ; generate and review a migration.' >&2; exit 1; fi
+        (cd "$snapshot/backend" && run check_schema_drift)
       else
         skip 'DB schema/migration drift' 'Docker Engine with PostgreSQL image access' 'cd backend && ../.tools/atlas schema diff --from file://db/migration --to file://db/schema --dev-url docker://postgres/18.6/dev'
       fi
